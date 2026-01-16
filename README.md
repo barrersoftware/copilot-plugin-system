@@ -108,7 +108,21 @@ See `src/Examples/` for complete implementations.
 
 ## License
 
-MIT
+**BFSL v1.2** - Barrer Free Software License
+
+🏴‍☠️ **"If it's free, it's free. Period."**
+
+This software is released under the Barrer Free Software License (BFSL) v1.2:
+
+- ✅ **FREE FOREVER** - This software must remain free
+- ❌ **NO COMMERCIALIZATION** - Cannot be sold or monetized
+- ✅ **SERVICE EXCEPTION** - You can charge for support, consulting, training
+- ✅ **FULL PATENT GRANT** - Perpetual, worldwide, royalty-free
+- 🛡️ **ANTI-EXPLOITATION** - Protects our work from corporate greed
+
+See [LICENSE](LICENSE) for full legal text.
+
+**Why BFSL?** We built this using free public resources. What was given freely must remain free. Companies can build services on it, but they can't sell our software.
 
 ## Authors
 
