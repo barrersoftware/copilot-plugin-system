@@ -13,7 +13,11 @@
     <Description>Plugin system for GitHub Copilot SDK - enabling extensibility and custom capabilities</Description>
     <PackageTags>copilot;github;plugin;sdk;ai</PackageTags>
     <RepositoryUrl>https://github.com/barrersoftware/copilot-plugin-system</RepositoryUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../../../LICENSE" Pack="true" PackagePath="/" />
+  </ItemGroup>
 
 </Project>
