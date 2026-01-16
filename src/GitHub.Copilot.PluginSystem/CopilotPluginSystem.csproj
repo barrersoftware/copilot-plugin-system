@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>GitHub.Copilot.PluginSystem</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>BarrerSoftware</Authors>
+    <Company>BarrerSoftware</Company>
+    <Description>Plugin system for GitHub Copilot SDK - enabling extensibility and custom capabilities</Description>
+    <PackageTags>copilot;github;plugin;sdk;ai</PackageTags>
+    <RepositoryUrl>https://github.com/barrersoftware/copilot-plugin-system</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../CopilotBridge/CopilotBridge.csproj" />
+  </ItemGroup>
+
+</Project>

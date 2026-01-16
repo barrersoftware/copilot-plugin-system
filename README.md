@@ -53,6 +53,8 @@ public class MyPlugin : PluginBase
 }
 ```
 
+See [Plugin Development Guide](docs/PLUGIN_DEVELOPMENT.md) for complete examples and patterns.
+
 ## Why We Built This
 
 GitHub released the Copilot SDK but provided no plugin architecture. We needed:
@@ -61,6 +63,48 @@ GitHub released the Copilot SDK but provided no plugin architecture. We needed:
 - **Extensibility** without modifying closed-source CLI
 
 Rather than wait, we built it ourselves using their published SDK.
+
+## Repository Structure
+
+```
+copilot-plugin-system/
+├── src/
+│   ├── GitHub.Copilot.PluginSystem/   # Core plugin system (NuGet package)
+│   │   ├── IPlugin.cs                  # Plugin interface
+│   │   ├── PluginBase.cs               # Base class for easy development
+│   │   ├── PluginManager.cs            # Plugin discovery and pipeline
+│   │   └── CopilotPluginSystem.csproj  # Package project
+│   └── Examples/
+│       ├── TrustFrameworkPlugin/       # Safety evaluation example
+│       └── MetaCognitionPlugin/        # Conversation analysis example
+└── docs/
+    └── PLUGIN_DEVELOPMENT.md           # Complete development guide
+```
+
+## Example Plugins
+
+### Trust Framework Plugin
+Evaluates operation safety and blocks risky commands:
+```csharp
+// Blocks dangerous patterns like "rm -rf /"
+// Warns on operations outside safe paths
+// Logs all safety decisions
+```
+
+### Meta-Cognition Plugin
+Tracks conversation patterns and generates insights:
+```csharp
+// Analyzes topics and emotional context
+// Logs conversation analytics every 10 turns
+// Generates insights on shutdown
+```
+
+See `src/Examples/` for complete implementations.
+
+## Documentation
+
+- [Plugin Development Guide](docs/PLUGIN_DEVELOPMENT.md) - Complete guide with patterns and examples
+- [API Reference](src/GitHub.Copilot.PluginSystem/) - Core interfaces and classes
 
 ## License
 
