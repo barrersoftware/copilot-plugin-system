@@ -22,7 +22,6 @@ public interface IPluginContext
     IDictionary<string, string> Configuration { get; }
     IDictionary<string, object> SharedData { get; }
     ILogger Logger { get; }
-    CaptainCP.CopilotBridge.CopilotBridge Bridge { get; }
 }
 
 public class RequestContext

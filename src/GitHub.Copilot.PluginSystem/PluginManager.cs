@@ -10,9 +10,9 @@ public class PluginManager
 
     public IReadOnlyList<IPlugin> LoadedPlugins => _plugins.AsReadOnly();
 
-    public PluginManager(CaptainCP.CopilotBridge.CopilotBridge bridge)
+    public PluginManager()
     {
-        _context = new PluginContext(bridge, _logger);
+        _context = new PluginContext(_logger);
     }
 
     public async Task LoadPluginsFromDirectoryAsync(string path)
@@ -141,11 +141,9 @@ internal class PluginContext : IPluginContext
     public IDictionary<string, string> Configuration { get; } = new Dictionary<string, string>();
     public IDictionary<string, object> SharedData { get; } = new Dictionary<string, object>();
     public ILogger Logger { get; }
-    public CaptainCP.CopilotBridge.CopilotBridge Bridge { get; }
 
-    public PluginContext(CaptainCP.CopilotBridge.CopilotBridge bridge, ILogger logger)
+    public PluginContext(ILogger logger)
     {
-        Bridge = bridge;
         Logger = logger;
     }
 }
